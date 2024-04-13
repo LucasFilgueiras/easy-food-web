@@ -21,6 +21,9 @@ jobs:
 
             - name: Build application
               run: npm run build
+
+            - name: Run application
+              run: npm run dev
               
             - name: Run tests
               run: npm run cypress:headless
