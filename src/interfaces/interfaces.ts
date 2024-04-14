@@ -1,7 +1,7 @@
 export interface IProductsMenu {
     IDPRODUTO: string;
     NOMEPRODUTO: string;
-    PRECOPRODUTO: number;
+    PRECOPRODUTO: string;
     DESCRICAOPRODUTO: string;   
 }
 

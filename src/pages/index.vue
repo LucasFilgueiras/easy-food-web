@@ -17,7 +17,7 @@
           <strong>{{ product.NOMEPRODUTO }}</strong>
           <small>{{ product.DESCRICAOPRODUTO }}</small>
         </div>
-        <strong>{{ formatPrice(product.PRECOPRODUTO) }}</strong>
+        <strong>{{ formatPrice(parseFloat(product.PRECOPRODUTO)) }}</strong>
       </div>
     </div>
   </main>
@@ -37,6 +37,7 @@ const fetchProductsMenu = async () => {
   try {
     const fetchProductsMenu = await axios.get("http://localhost:9000/cardapio/produtos/1");
     if(fetchProductsMenu) productsMenu.value = fetchProductsMenu.data;
+    console.log(fetchProductsMenu.data)
   } catch (error) {
     console.error(error);
     window.alert("Não foi possível carregar as informações dos produtos do cardápio");
